@@ -2,7 +2,7 @@
 
 A redesigned homepage for a fictional therapy practice, built as part of the GrowMyTherapy internship assignment. The site is cloned from an existing counseling homepage, then rebuilt with new copy, a new color palette, and new imagery based on a fictional therapist's profile.
 
-**Live site:**GrowMyTherapy(https://grow-my-therapy-final-assignment.vercel.app/)
+**Live site:** GrowMyTherapy(https://grow-my-therapy-final-assignment.vercel.app/)
 
 ---
 
