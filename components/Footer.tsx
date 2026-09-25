@@ -14,12 +14,6 @@ const TEAM = ["Anxiety & Panic", "Trauma Therapy", "EMDR & Body-Based Work", "Bu
 const HEADING = "t-label mb-4 text-ink lg:mb-[1.9vw]";
 const ITEM = "text-[1rem] leading-[1.8] text-body lg:text-[clamp(0.95rem,1.38vw,1.05rem)]";
 
-/*
-  Mobile/tablet stacking order (confirmed from screenshot): intro -> Navigate
-  -> Contact -> Our Team. Desktop keeps Navigate, Our Team, Contact left to
-  right via explicit lg:col-start (order has no effect once placement is
-  explicit, so the two breakpoints can disagree on order safely).
-*/
 export default function Footer() {
   return (
     <footer id="contact" className="bg-canvas">
