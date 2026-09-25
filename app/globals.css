@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+/*
+  THEME TOKENS (Tailwind v4: tokens live in CSS, no tailwind.config file).
+  Each --color-* token becomes a utility: bg-primary, text-accent, border-line ...
+  Colors below were sampled from the original page screenshot.
+  Part 2 (redesign): change ONLY these values to re-theme the whole site.
+*/
+@theme {
+  --color-primary: #52725c;   /* sage: script words, footer bar */
+  --color-secondary: #d9e4ea; /* dusty sky: "How we work" band */
+  --color-accent: #3d5548;    /* deep sage: quote band */
+  --color-canvas: #f7f2ea;    /* warm ivory page background */
+  --color-paper: #fffdf9;     /* white sections */
+  --color-ink: #26342e;       /* headings, dark text */
+  --color-body: #52605a;      /* paragraph text */
+  --color-line: #e0d9cc;
+  --color-sage-soft: #dfe8db; /* pistachio tint */
+  --color-sky: #d9e4ea;       /* dusty sky blue */
+  --color-blush: #f3dfe0;     /* powder pink */
+  --color-lavender: #e4dcef;  /* soft lavender */
+  --color-greige: #d9d2c6;    /* gray-beige */      /* hairlines */
+}
+
+/* `inline` lets these point at the next/font variables set in app/layout.tsx */
+@theme inline {
+  --font-heading: var(--font-newsreader), Georgia, serif;
+  --font-body: var(--font-mulish), system-ui, sans-serif;
+  --font-script: var(--font-script-face), cursive;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-canvas font-body text-body antialiased;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply text-ink;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-4 outline-primary;
+  }
+}
+
+/*
+  Type scale. Sizes are fluid (vw) so the layout scales like the original;
+  measured at a 1161px-wide desktop capture, capped for very large screens.
+*/
+@utility t-h1 {
+  @apply font-heading font-light;
+  font-size: clamp(2.1rem, 4.13vw, 3.5rem);
+  line-height: 1.4;
+}
+@utility t-h2 {
+  @apply font-heading font-light;
+  font-size: clamp(1.9rem, 3.45vw, 3rem);
+  line-height: 1.42;
+}
+@utility t-h2-sm {
+  @apply font-heading font-light;
+  font-size: clamp(1.75rem, 3.1vw, 2.7rem);
+  line-height: 1.3;
+}
+@utility t-h3 {
+  @apply font-heading font-light;
+  font-size: clamp(1.5rem, 2.4vw, 2.1rem);
+  line-height: 1.3;
+}
+@utility t-body {
+  @apply font-body font-normal text-body;
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  line-height: 1.85;
+}
+@utility t-label {
+  @apply font-body font-medium uppercase;
+  font-size: clamp(0.85rem, 1.35vw, 1.02rem);
+  letter-spacing: 0.1em;
+}
+@utility t-label-sm {
+  @apply font-body font-medium uppercase;
+  font-size: clamp(0.78rem, 1.2vw, 0.95rem);
+  letter-spacing: 0.1em;
+}
+@utility t-lead {
+  @apply font-body font-semibold uppercase text-ink;
+  font-size: clamp(0.95rem, 1.45vw, 1.1rem);
+  letter-spacing: 0.08em;
+  line-height: 1.75;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
