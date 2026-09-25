@@ -1,18 +1,11 @@
 import Image from "next/image";
 import { Photo, PillLink, Script, TextLink, VideoBox } from "./ui";
 
-/*
-  One consistent spacing system for every section, matching HowWeWork
-  ("A warm and caring approach to therapy.") and its side-by-side video:
-  - WRAP: the same max width and side padding everywhere.
-  - SECTION_Y: the same top/bottom breathing room everywhere.
-  - TWO_COL: the same equal-width, gapped split for any text+photo section.
-*/
 const WRAP = "mx-auto max-w-[1200px] px-[6.5%] lg:px-[6%]";
 const SECTION_Y = "py-16 lg:py-24";
 const TWO_COL = "grid items-center gap-10 lg:grid-cols-2 lg:gap-[5vw]";
 
-/* ------------------------------------------------------------------ Hero */
+/* ------------------------------------------------------------------ Hero ------------------------------------------------------------------ */
 export function Hero() {
   return (
     <section className={`bg-canvas ${SECTION_Y}`}>
@@ -48,7 +41,7 @@ export function Hero() {
   );
 }
 
-/* ----------------------------------------------------------------- Intro */
+/* ----------------------------------------------------------------- Intro ------------------------------------------------------------------ */
 export function Intro() {
   return (
     <section className={`bg-canvas ${SECTION_Y}`}>
@@ -81,7 +74,7 @@ export function Intro() {
   );
 }
 
-/* ------------------------------------------------------------ Who we help */
+/* ------------------------------------------------------------ Who we help ------------------------------------------------------------------ */
 const WHO = [
   {
     title: "Anxiety & Panic Therapy",
@@ -133,7 +126,7 @@ export function WhoWeHelp() {
   );
 }
 
-/* ------------------------------------------------------------- Quote band */
+/* ------------------------------------------------------------- Quote band ------------------------------------------------------------------ */
 export function QuoteBand() {
   return (
     <section
@@ -158,7 +151,7 @@ export function QuoteBand() {
   );
 }
 
-/* -------------------------------------------------------------- Expertise */
+/* -------------------------------------------------------------- Expertise ------------------------------------------------------------------ */
 const EXPERTISE_LEFT = [
   "Anxiety",
   "Panic attacks",
@@ -207,7 +200,7 @@ export function Expertise() {
   );
 }
 
-/* ------------------------------------------------------------ How we work */
+/* ------------------------------------------------------------ How we work ------------------------------------------------------------------ */
 export function HowWeWork() {
   return (
     <section id="how-we-work" className={`bg-secondary ${SECTION_Y}`}>
@@ -245,7 +238,7 @@ export function HowWeWork() {
   );
 }
 
-/* --------------------------------------------------------------- Honoring */
+/* --------------------------------------------------------------- Honoring ------------------------------------------------------------------ */
 export function Honoring() {
   return (
     <section className={`bg-paper ${SECTION_Y}`}>
@@ -265,7 +258,7 @@ export function Honoring() {
   );
 }
 
-/* ------------------------------------------------------------- Specialties */
+/* ------------------------------------------------------------- Specialties ------------------------------------------------------------------ */
 const SPECIALTIES = [
   {
     title: "Anxiety & Panic",
@@ -308,7 +301,7 @@ export function Specialties() {
   );
 }
 
-/* --------------------------------------------------------------- Schedule */
+/* --------------------------------------------------------------- Schedule ------------------------------------------------------------------ */
 export function Schedule() {
   return (
     <section id="schedule" className={`bg-blush/45 ${SECTION_Y}`}>
@@ -344,7 +337,7 @@ export function Schedule() {
   );
 }
 
-/* ------------------------------------------------------------- Our Office */
+/* ------------------------------------------------------------- Our Office ------------------------------------------------------------------ */
 export function OurOffice() {
   return (
     <section id="our-office" className={`bg-sky/70 ${SECTION_Y}`}>
@@ -392,7 +385,7 @@ export function OurOffice() {
   );
 }
 
-/* ------------------------------------------------------------------- FAQs */
+/* ------------------------------------------------------------------- FAQs ------------------------------------------------------------------ */
 const FAQS = [
   [
     "What does therapy with Dr. Reynolds look like?",
