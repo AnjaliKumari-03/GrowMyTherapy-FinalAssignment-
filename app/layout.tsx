@@ -2,9 +2,6 @@ import type { Metadata } from "next";
 import { Newsreader, Mulish, Herr_Von_Muellerhoff } from "next/font/google";
 import "./globals.css";
 
-// CLOSEST GOOGLE-FONT MATCHES to the original (light serif headings, Mulish-style
-// body, thin handwritten script). Confirm in DevTools (Computed > font-family)
-// and swap here if the original uses different fonts.
 const heading = Newsreader({
   subsets: ["latin"],
   style: ["normal", "italic"],
@@ -26,9 +23,7 @@ export const metadata: Metadata = {
     "Licensed clinical psychologist in Santa Monica, CA offering anxiety, panic, trauma, EMDR, and burnout therapy for adults, in person or by secure telehealth across California.",
 };
 
-// Local-business structured data (JSON-LD) so search engines understand this
-// is a real psychologist practice in Santa Monica, CA. Invisible on the page;
-// it just gives Google clean, structured facts (name, address, specialty).
+
 const schema = {
   "@context": "https://schema.org",
   "@type": "Psychologist",
