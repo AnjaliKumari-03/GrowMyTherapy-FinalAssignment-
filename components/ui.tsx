@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 
-/** The thin teal handwritten accent word used inside headings. */
 export function Script({
   children,
   className = "",
@@ -12,7 +11,6 @@ export function Script({
   className?: string;
   block?: boolean;
 }) {
-  // Inline: zero line-height so the big script glyphs don't stretch the heading's line box.
   const mode = block ? "block leading-[1.15]" : "leading-[0]";
   return (
     <span className={`font-script text-[1.55em] text-primary ${mode} ${className}`}>
@@ -21,7 +19,6 @@ export function Script({
   );
 }
 
-/** Photo that fills whatever box you give it via className (height/aspect). Soft shadow + slow zoom on hover. */
 export function Photo({
   src,
   alt,
@@ -50,7 +47,6 @@ export function Photo({
   );
 }
 
-/** Silent looping video that fills its box (same look as Photo). */
 export function VideoBox({ src, poster, className = "" }: { src: string; poster: string; className?: string }) {
   return (
     <div className={`relative overflow-hidden shadow-[0_18px_40px_-16px_rgba(38,52,46,0.4)] ${className}`}>
@@ -59,7 +55,6 @@ export function VideoBox({ src, poster, className = "" }: { src: string; poster:
   );
 }
 
-/** Small uppercase link with a thin underline ("BOOK AN APPOINTMENT"). */
 export function TextLink({ href, children }: { href: string; children: ReactNode }) {
   return (
     <Link
@@ -71,7 +66,6 @@ export function TextLink({ href, children }: { href: string; children: ReactNode
   );
 }
 
-/** Oval outlined button ("CONTACT", "BOOK NOW"). */
 export function PillLink({ href, children }: { href: string; children: ReactNode }) {
   return (
     <Link
