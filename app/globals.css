@@ -1,28 +1,22 @@
 @import "tailwindcss";
 
-/*
-  THEME TOKENS (Tailwind v4: tokens live in CSS, no tailwind.config file).
-  Each --color-* token becomes a utility: bg-primary, text-accent, border-line ...
-  Colors below were sampled from the original page screenshot.
-  Part 2 (redesign): change ONLY these values to re-theme the whole site.
-*/
+
 @theme {
-  --color-primary: #52725c;   /* sage: script words, footer bar */
-  --color-secondary: #d9e4ea; /* dusty sky: "How we work" band */
-  --color-accent: #3d5548;    /* deep sage: quote band */
-  --color-canvas: #f7f2ea;    /* warm ivory page background */
-  --color-paper: #fffdf9;     /* white sections */
-  --color-ink: #26342e;       /* headings, dark text */
-  --color-body: #52605a;      /* paragraph text */
+  --color-primary: #52725c;   
+  --color-secondary: #d9e4ea; 
+  --color-accent: #3d5548;   
+  --color-canvas: #f7f2ea;   
+  --color-paper: #fffdf9;     
+  --color-ink: #26342e;       
+  --color-body: #52605a;      
   --color-line: #e0d9cc;
-  --color-sage-soft: #dfe8db; /* pistachio tint */
-  --color-sky: #d9e4ea;       /* dusty sky blue */
-  --color-blush: #f3dfe0;     /* powder pink */
-  --color-lavender: #e4dcef;  /* soft lavender */
-  --color-greige: #d9d2c6;    /* gray-beige */      /* hairlines */
+  --color-sage-soft: #dfe8db; 
+  --color-sky: #d9e4ea;      
+  --color-blush: #f3dfe0;    
+  --color-lavender: #e4dcef; 
+  --color-greige: #d9d2c6;    
 }
 
-/* `inline` lets these point at the next/font variables set in app/layout.tsx */
 @theme inline {
   --font-heading: var(--font-newsreader), Georgia, serif;
   --font-body: var(--font-mulish), system-ui, sans-serif;
@@ -46,10 +40,7 @@
   }
 }
 
-/*
-  Type scale. Sizes are fluid (vw) so the layout scales like the original;
-  measured at a 1161px-wide desktop capture, capped for very large screens.
-*/
+
 @utility t-h1 {
   @apply font-heading font-light;
   font-size: clamp(2.1rem, 4.13vw, 3.5rem);
