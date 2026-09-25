@@ -2,7 +2,7 @@
 
 A redesigned homepage for a fictional therapy practice, built as part of the GrowMyTherapy internship assignment. The site is cloned from an existing counseling homepage, then rebuilt with new copy, a new color palette, and new imagery based on a fictional therapist's profile.
 
-**Live site:** _add your Vercel URL here once deployed_
+**Live site:**[ _add your Vercel URL here once deployed_](https://grow-my-therapy-final-assignment.vercel.app/)
 
 ---
 
@@ -84,7 +84,7 @@ npm start
 
 ## Deployment
 
-This project is set up to deploy on [Vercel](https://vercel.com) with zero configuration — push to GitHub, import the repo into Vercel, and deploy.
+This project is set up to deploy on [Vercel]([https://vercel.com](https://grow-my-therapy-final-assignment.vercel.app/)) with zero configuration — push to GitHub, import the repo into Vercel, and deploy.
 
 ## Disclaimer
 
